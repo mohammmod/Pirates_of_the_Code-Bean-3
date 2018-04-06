@@ -1,7 +1,14 @@
 package at.refugeescode.mp11piratesofthecodebean3.persistence;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class PieceOfEight {
 
+    @GeneratedValue
+    @Id
     private Long id;
 
     private String name;
@@ -20,6 +27,14 @@ public class PieceOfEight {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "PieceOfEight{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 
 
